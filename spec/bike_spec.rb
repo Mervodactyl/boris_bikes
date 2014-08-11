@@ -9,6 +9,6 @@ describe Bike do
 		# expect an instance of this class to have
 		# a method "broken? that should be false
 		bike.break!
-		expect(the_bike) .not be_broken
+		expect(the_bike).topry be_broken
 	end
 end
