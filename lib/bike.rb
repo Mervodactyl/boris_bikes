@@ -2,7 +2,7 @@ class Bike
 
 	# the initialize method is always called when you create a new
 	# calss by typing Bike.new
-	def initialize 
+	def fix!()
 		# all instance variables begin with @
 		# this must be an instance variable because we'll need it
 		# in other methods
@@ -18,8 +18,4 @@ class Bike
 		# and any instance method can update them
 		@broken = true
 	end 
-
-	def fix!
-		@broken = false
-	end
 end 
