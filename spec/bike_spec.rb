@@ -4,6 +4,7 @@ require './lib/bike'
 # we're describing the funcunality of a specific class, Bike
 describe Bike do 
 	let(:bike) { Bike.new }
+	let(:station) { DokingStation.new }
 	# this a specific feature (behaiviour)
 	# that we expect to be present
 	it "should not be broken after we create it" do
