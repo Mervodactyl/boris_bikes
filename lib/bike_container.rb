@@ -9,7 +9,11 @@ module BikeContainer
 	end
 
 	def dock(bike)
-		bikes << bike
+		if full?
+			raise
+		else
+			bikes << bike
+		end
 	end
 
 	def release(bike)
@@ -17,11 +21,16 @@ module BikeContainer
 	end
 
 	def capacity
-		123
+		@capacity ||= 10
 	end
 
 	def capacity=(number)
-		123
+		@capacity = number
 	end
+
+	def full?
+		bikes.length == capacity
+	end
+
 end
 
