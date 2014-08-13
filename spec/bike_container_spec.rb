@@ -34,4 +34,10 @@ shared_examples 'a bike container' do
 		fill_holder holder
 		expect { holder.dock(bike) }.to raise_error(RuntimeError)
 	end
+
+	it 'should reject release request if a bike is not there' do
+		expect(holder.release(bike)).to eq raise_error(RuntimeError, "no bikes available")
+	end
+
+
 end

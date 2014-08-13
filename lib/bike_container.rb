@@ -19,7 +19,11 @@ module BikeContainer
 	end
 
 	def release(bike)
-		bikes.delete(bike)
+		if empty?
+			false
+		else
+			bikes.delete(bike)
+		end
 	end
 
 	def capacity
@@ -32,6 +36,10 @@ module BikeContainer
 
 	def full?
 		bikes.length == capacity
+	end
+
+	def empty?
+		bikes.empty?
 	end
 
 end
