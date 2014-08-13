@@ -31,7 +31,14 @@ module BikeContainer
 		bike_count == capacity
 	end
 
-	def availble_bikes 
+	def availble_bikes
 		bikes.reject {|bike| bike.broken? }
 	end
+
+	def accept(bike)
+		bike.fix
+		dock(bike)
+	end
+
 end
+
