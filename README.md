@@ -1,6 +1,4 @@
 Boris Bikes
 ===========
 
-A Makers Academy Week 2 project to create the Boris Bike network using Object Oriented Programming.
-
-Hitch!
+A Makers Academy Week 2 project to create the Boris Bike network using Object Oriented Programming. Because it's fun!
