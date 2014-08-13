@@ -2,7 +2,7 @@ require './lib/docking_station'
 require './lib/bike'
 
 describe DockingStation do
-
+it_should_behave_like "a bike container"
 	let(:station) { DockingStation.new(:capacity =>123) }
   let(:bike) { Bike.new }
 
