@@ -2,6 +2,7 @@ require './lib/bike_container'
 
 
 shared_examples 'a bike container' do
+	# let(:bike) { double :bike }
 	let(:bike) { Bike.new }
 	let(:holder) { described_class.new }
 
@@ -36,7 +37,7 @@ shared_examples 'a bike container' do
 	end
 
 	it 'should reject release request if a bike is not there' do
-		expect(holder.release(bike)).to eq raise_error(RuntimeError, "no bikes available")
+		expect{ holder.release(bike) }.to raise_error(RuntimeError, "no bikes available")
 	end
 
 

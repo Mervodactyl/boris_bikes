@@ -8,7 +8,7 @@ class Bike
 		# in other methods
 		@broken = false
 	end
-	
+
 	def broken?
 		# instance variables are accessible in all methods
 		@broken
@@ -17,5 +17,6 @@ class Bike
 	def break!
 		# and any instance method can update them
 		@broken = true
-	end 
-end 
+		self
+	end
+end

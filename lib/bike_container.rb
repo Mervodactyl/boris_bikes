@@ -20,7 +20,7 @@ module BikeContainer
 
 	def release(bike)
 		if empty?
-			false
+			raise 'no bikes available'
 		else
 			bikes.delete(bike)
 		end
@@ -40,6 +40,10 @@ module BikeContainer
 
 	def empty?
 		bikes.empty?
+	end
+
+	def available_bikes
+		bikes.select { |bike| !bike.broken? }
 	end
 
 end
