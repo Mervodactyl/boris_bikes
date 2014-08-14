@@ -12,5 +12,5 @@ it_should_behave_like "a bike container"
     expect{ garage.dock(bike) }.to raise_error
   end
 
-
+  #testing git
 end
